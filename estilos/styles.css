@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root {
+    --font-poppins: "Poppins", sans-serif;
+    ;
+}
+
+body {
+    font-family: var(--font-poppins);
+}
+
+.header{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../assets/header.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+}
+.header__wave{
+    position: absolute;
+    bottom: -1px;
+}
+.header__text{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    padding: 1em 2em;
+    color: #00185f;
+    background-color: rgba(240, 255, 255, 0.439);
+}
+.header__span{
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+}
+
+
+/* Alineación del contenedor */
+.arrow-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    top: -10%;
+  }
+  
+  /* Estilos para la flecha */
+  .arrow-container i {
+    font-size: 48px;
+    color: #ffffff;
+    animation: bounce 2s infinite;
+  }
+  
+  /* Animación de rebote */
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+
+
+
+.cv__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    width: clamp(100px, 100%, 1000px);
+    margin: 0 auto;
+}
+
+.cv__item {
+    flex-basis: 140px;
+    max-width: 160px;
+    flex-grow: 1;
+
+    margin-top: 2em;
+}
+
+.cv__title {
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 0 .5em 0;
+    text-align: center;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    font-weight: 600;
+
+}
+
+.cv__img {
+    width: 100%;
+    cursor: pointer
+}
+
+/* ------------------ button cv ----------------------- */
+
+.cv__button {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: .5em;
+    border-radius: .3em;
+    color: #fff;
+    background-image: linear-gradient(to right, #498c2a 0%, #74d754 51%, #56ab2f 100%);
+    border: none;
+    padding: .5em;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: 0.5s;
+    background-size: 200% auto;
+    line-height: 1.3;
+}
+
+.cv__button:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.cv__icon {
+    width: 25px;
+}
+
+
+/* --------------------- lightbox -------------------------- */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox__content {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+
+.text__paragraph{
+    font-size: 1rem;
+    text-align: center;
+    width: clamp(100px, 90%, 700px);
+    margin: 3em auto;
+    line-height: 1.3;
+}
+.text__span{
+    font-weight: 400;
+}
+
+
+/* ----------------- footer --------------------------- */
+
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: #00185f;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+}
+.footer__text{
+    color: #fff;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 2em;
+}
